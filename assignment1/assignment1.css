@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1 {
+	font-family: "Playfair Display", serif;
+	font-size: 75px;
+	color: #012558;
+}
+
+h2 {
+	font-family: "Playfair Display", serif;
+	font-size: 20px;
+	color: #012558;
+}
+
+p {
+	font-family: "Helvetica Neue", Helvetica, Gotham, Arial, "sans-serif";
+	font-size: 30;
+	color: #000000;
+	line-height: 1.5em;
+	margin-bottom: 5%;
+}
+
+.caption{
+	font-family: "Helvetica Neue", Helvetica, Gotham, Arial, "sans-serif";
+	font-size: 10px;
+	color: #012558;
+	margin: 5px 0 25px 0;
+}
+
+.title{
+	width: 100%;
+	text-align: center;
+	border-bottom: #023A88 thick dotted;
+	margin-bottom: 5%;
+}
+
+.container{
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;
+	margin-right:10%;
+	margin-bottom: 50%;
+}
+
+.column1 {
+	width: 70%;
+	float: left;
+	margin-right: 10%;
+	margin-bottom: 10%;
+}
+
+.column2 {
+	width: 20%;
+	float:left;
+	margin-top: 20px;
+	margin-right: 0%;
+}
+
+.responsive{
+	max-width: 300px;
+	height: auto;
+	width: 100%;
+}
+
+header{
+	height:10%;
+	width: 100%;
+	background-color: #023A88;
+	padding: 1%;
+}
+footer{
+	position: fixed;
+	height:5%;
+	width: 100%;
+	background-color: #023A88;
+	bottom: 0;
+	text-align: center;
+	padding-top: 1%;
+	color: #FFFFFF;
+	font-family: "Helvetica Neue", Helvetica, Gotham, Arial, "sans-serif";
+	font-size: 12px;
+}
+
+a:link{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:visited{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: #FFF531;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
