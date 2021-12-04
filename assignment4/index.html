@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+	
+<head>
+<!--Head section contains information about the page-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="Maria Goodrick">
+	<meta name="Description" content="Assignment 4: Working with JavaScript">
+	<meta name="keywords" content="add keywords here">
+	
+	<title>Assignment 4: Working with JavaScript</title>
+	
+	<link rel="stylesheet" href="style.css">
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="jquery-ui-1.13.0.custom/jquery-ui.css">
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
+		<script>
+	  $( function() {
+		$( "#datepicker" ).datepicker();
+	  } );
+	  </script>
+
+		<script>
+	  $( function() {
+		$( "#accordion" ).accordion();
+	  } );
+	  </script>
+	
+		<style>
+	  #draggable, #draggable2 { width: 50px; height: 50px; padding: .5em; float: left; margin: 10px 10px 10px 10px; }
+	  #droppable { width: 200px; height: 50px; padding: 0.5em; float: left; margin: 10px 10px 10px 10px; }
+	  </style>
+		 <script>
+	  $( function() {
+		$( "#draggable" ).draggable({ revert: "valid" });
+		$( "#draggable2" ).draggable({ revert: "invalid" });
+
+		$( "#droppable" ).droppable({
+		  classes: {
+			"ui-droppable-active": "ui-state-active",
+			"ui-droppable-hover": "ui-state-hover"
+		  },
+		  drop: function( event, ui ) {
+			$( this )
+			  .addClass( "ui-state-highlight" )
+			  .find( "p" )
+				.html( "Correct!" );
+		  }
+		});
+	  } );
+	  </script>
+	
+		<style>
+	  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+	  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+	  #sortable li span { position: absolute; margin-left: -1.3em; }
+	  </style>
+		<script>
+	  $( function() {
+		$( "#sortable" ).sortable();
+	  } );
+	  </script>
+	
+	 <script>
+	  $( function() {
+		$( document ).tooltip();
+	  } );
+	  </script>
+	  <style>
+	  label {
+		padding-right: 30px;
+		width: 5em;
+	  }
+	  </style>
+	
+</head>
+	
+<body>
+<!-- Body section contains content displayed in a browser window -->
+	
+	<h1>Assignment 4: Working with JavaScript</h1>
+	<p> Here are 5 examples of jQuery UI components.</p>
+	
+	<h2>Example 1: Date Picker</h2>
+	<p>Date: <input type="text" id="datepicker"></p>
+	
+	<br><br><h2> Example 2: Accordion</h2>
+		<div id="accordion">
+		  <h3>Intro</h3>
+		  <div>
+			<p>
+			My name is Maria Goodrick.
+			</p>
+		  </div>
+		  <h3>Fun Fact 1</h3>
+		  <div>
+			<p>
+			I started mismatching my socks in high school and never stopped. Today was neon green and purple. It's the little things.
+			</p>
+		  </div>
+		  <h3>Fun Fact 2</h3>
+		  <div>
+			<p>
+			I can't focus on homework unless I'm listening to music that makes me feel like I'm driving through the Pacific Northwest and looking at trees and rocks and stuff.
+			</p>
+		  </div>
+		  <h3>Fun Fact 3</h3>
+		  <div>
+			<p>
+			I try not to travel with my dad too much anymore because within the span of two years, we both sunk a boat in the Potomac and accidentally blew up a Jeep in North Carolina together. I used to think he was unlucky, but I know now it's just really extreme user error.
+			</p>
+		  </div>
+		</div>
+	
+	<br><br><h2>Example 3: Draggable</h2>
+	<p>25+37=</p>
+		<div id="draggable" class="ui-widget-content">
+		  <p>26</p>
+		</div>
+
+		<div id="draggable2" class="ui-widget-content">
+		  <p>62</p>
+		</div>
+
+		<div id="droppable" class="ui-widget-header">
+		  <p>Drop answer here:</p>
+		</div>
+	
+	<br><br><br><br><br><br><h2>Example 4: Sortable</h2>
+		<p> Sort the members of the Fellowship of the Ring from most to least favorite.</p>
+		<ul id="sortable">
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Frodo</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Sam</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Merry</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Pippin</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Aragorn</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Boromir</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Legolas</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Gimli</li>
+		  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Gandalf</li>
+		</ul>
+	
+	<br><br><h2>Example 5: Tooltip</h2>
+		<p><label for="age">What is your greatest fear?</label><input id="age" title="Mine is the spider I saw a minute ago that disappeared before I could find a cup."></p>
+		<p>Hover the field to see the tooltip.</p>
+	
+</body>
+</html>
